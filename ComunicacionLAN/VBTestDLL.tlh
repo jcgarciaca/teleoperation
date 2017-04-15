@@ -1,0 +1,99 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (d7643132).
+//
+// d:\portable visual c++\portable visual c++ 6.0\portable visual c++ 6.0\myprojects\vbtojavamotocom\release\VBTestDLL.tlh
+//
+// C++ source equivalent of Win32 type library D:\Teleoperacion Motoman\VisualBasic\VBTestDLL.dll
+// compiler-generated file created 09/24/12 at 14:00:13 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace VBTestLib {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("dd43dcbd-ad9e-48a1-b159-d684a8cf2ef0"))
+/* dual interface */ _CTest;
+struct /* coclass */ CTest;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(_CTest, __uuidof(_CTest));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("dd43dcbd-ad9e-48a1-b159-d684a8cf2ef0"))
+_CTest : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetnCid,put=PutnCid))
+    short nCid;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    short GetnCid ( );
+    void PutnCid (
+        short nCid );
+    short OpenPort ( );
+    short ClosePort ( );
+    short SetPosition (
+        double posS,
+        double posL,
+        double posU,
+        double posR,
+        double posB,
+        double posT );
+    short ExecuteJob (
+        _bstr_t jobname );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_nCid (
+        short * nCid ) = 0;
+    virtual HRESULT __stdcall put_nCid (
+        short nCid ) = 0;
+    virtual HRESULT __stdcall raw_OpenPort (
+        short * _arg1 ) = 0;
+    virtual HRESULT __stdcall raw_ClosePort (
+        short * _arg1 ) = 0;
+    virtual HRESULT __stdcall raw_SetPosition (
+        double posS,
+        double posL,
+        double posU,
+        double posR,
+        double posB,
+        double posT,
+        short * _arg7 ) = 0;
+    virtual HRESULT __stdcall raw_ExecuteJob (
+        BSTR jobname,
+        short * _arg2 ) = 0;
+};
+
+struct __declspec(uuid("12be1f55-147e-440e-86da-2e908435e623"))
+CTest;
+    // [ default ] interface _CTest
+
+//
+// Wrapper method implementations
+//
+
+#include "d:\portable visual c++\portable visual c++ 6.0\portable visual c++ 6.0\myprojects\vbtojavamotocom\release\VBTestDLL.tli"
+
+} // namespace VBTestLib
+
+#pragma pack(pop)
